@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/burger.css" />
+    <link rel="stylesheet" href="css/cards.css" />
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="icon" type="image/png" href="img/fav.png" />
+    <title>Emergency Site</title>
+  </head>
+  <body id="register">
+    <header>
+      <nav>
+        <div id="logotype-wrapper" class="logo">
+          <a href="index.html">
+            <img src="img/NVD-25.LOGO.png" alt="NVD-25LOGO" class="logo-img" />
+          </a>
+        </div>
+        <ul class="menu">
+          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
+          <li><a class="menuItem" href="register.html">Indberet</a></li>
+        </ul>
+        <button class="burger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <h1>INDBERET</h1>
+
+     <!-- Kun denne SECTION er rørt -->
+<section id="form-section" aria-labelledby="form-title">
+  <article id="form-info" class="reg-hero">
+    <h2 id="form-title">Indberetning</h2>
+    <p class="lead">Udfyld felterne herunder for at indberette hændelsen.</p>
+  </article>
+
+  <div class="reg-card poster">
+    <form id="webform" novalidate>
+      <!-- Navn -->
+      <div class="grid two">
+        <div class="field">
+          <label for="firstName">Fornavn</label>
+          <input id="firstName" name="firstName" type="text" placeholder="Sofie" required />
+          <div class="state">●</div>
+          <div class="msg error">Udfyld venligst dit fornavn.</div>
+        </div>
+
+        <div class="field">
+          <label for="lastName">Efternavn</label>
+          <input id="lastName" name="lastName" type="text" placeholder="Amalie" required />
+          <div class="state">●</div>
+          <div class="msg error">Udfyld venligst dit efternavn.</div>
+        </div>
+      </div>
+
+      <!-- Kontakt -->
+      <div class="grid two">
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" placeholder="navn@eksempel.dk" required />
+          <div class="state">●</div>
+          <div class="msg">Vi deler aldrig din e-mail.</div>
+        </div>
+
+        <div class="field">
+          <label for="phone">Telefonnr.</label>
+          <input id="phone" name="phone" type="tel" placeholder="+45 12 34 56 78"
+                 pattern="^(\+?\d{1,3}\s?)?(\d{2}\s?){4}$" required />
+          <div class="state">●</div>
+          <div class="msg error">Skriv et gyldigt dansk nummer (8 cifre).</div>
+        </div>
+      </div>
+
+      <!-- Hændelse (radio – 2 kolonner) -->
+      <div class="field">
+        <label>Hændelse</label>
+        <div class="radio-grid">
+          <label class="radio"><input type="radio" name="reportType" value="Myggestik (NVD-myg)" required /> Myggestik (NVD-myg)</label>
+          <label class="radio"><input type="radio" name="reportType" value="Sygdomstilfælde" /> Sygdomstilfælde</label>
+          <label class="radio"><input type="radio" name="reportType" value="Mistanke om udbrud" /> Mistanke om udbrud</label>
+          <label class="radio"><input type="radio" name="reportType" value="Anden hændelse" /> Anden hændelse</label>
+        </div>
+        <div class="msg error">Vælg venligst én hændelse.</div>
+      </div>
+
+      <!-- Område + dato -->
+      <div class="grid two">
+        <div class="field select-wrap">
+          <label for="area">Hvor</label>
+          <select id="area" name="area" required>
+            <option value="" disabled selected>Vælg område</option>
+            <option>København</option>
+            <option>Aarhus</option>
+            <option>Odense</option>
+            <option>Aalborg</option>
+            <option>Esbjerg</option>
+            <option>Randers</option>
+            <option>Kolding</option>
+            <option>Haderslev</option>
+            <option>Vejle</option>
+            <option>Horsens</option>
+            <option>Roskilde</option>
+            <option>Herning</option>
+            <option>Viborg</option>
+            <option>Næstved</option>
+            <option>Fredericia</option>
+            <option>Silkeborg</option>
+            <option>Hjørring</option>
+            <option>Holstebro</option>
+            <option>Slagelse</option>
+            <option>Aabenraa</option>
+            <option>Svendborg</option>
+            <option>Skanderborg</option>
+            <option>Helsingør</option>
+            <option>Skive</option>
+            <option>Thisted</option>
+            <option>Kalundborg</option>
+            <option>Ringsted</option>
+            <option>Frederikshavn</option>
+            <option>Greve</option>
+            <option>Hørsholm</option>
+            <option>Rønne</option>
+            <option>Haderslev</option>
+            <option>Aalborg</option>
+          </select>
+          <div class="msg error">Angiv venligst et område.</div>
+        </div>
+
+        <div class="field">
+          <label for="date">Dato</label>
+          <input id="date" name="date" type="date" required />
+        </div>
+      </div>
+
+      <!-- Beskrivelse -->
+      <div class="field">
+        <label for="details">Beskrivelse</label>
+        <textarea id="details" name="details" placeholder="Skriv kort hvad der skete …" minlength="10" required></textarea>
+        <div class="msg">Mindst 10 tegn.</div>
+      </div>
+
+      <!-- Samtykke -->
+      <div class="field">
+        <label>Samtykke</label>
+        <label class="consent">
+          <input id="ok" type="checkbox" required />
+          <span>Jeg accepterer indsendelse af mine oplysninger til behandling i forbindelse med NVD-25.</span>
+        </label>
+        <div class="msg error">Du skal acceptere for at indsende.</div>
+      </div>
+
+      <!-- Submit -->
+      <div class="actions">
+        <button id="submitBtn" class="btn-primary" type="submit" disabled>Indsend</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- Summary bevares – jeg udskifter bare indhold ved submit -->
+<section id="form-summary" aria-labelledby="summary-title">
+  <h2 id="summary-title">Hvorfor skal du indberette?</h2>
+  <article id="summary-article">
+    <p class="placeholder">Opsummering vises her efter indsendelse.</p>
+  </article>
+</section>
+
+      </section>
+    </main>
+
+    <!-- Lille script til at vise opsummering uden at ændre din struktur -->
+    <script>
+      (function () {
+        const form = document.getElementById("webform");
+        const summaryArticle = document.getElementById("summary-article");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Simpel HTML5 validering
+          if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+          }
+
+          const data = new FormData(form);
+          const firstName = (data.get("firstName") || "").trim();
+          const lastName = (data.get("lastName") || "").trim();
+          const phone = (data.get("phone") || "").trim();
+          const email = (data.get("email") || "").trim();
+          const reportType = data.get("reportType") || "";
+          const area = data.get("area") || "";
+          const date = data.get("date") || "";
+          const details = (data.get("details") || "").trim();
+
+          summaryArticle.innerHTML = `
+            <div class="summary-card">
+              <h3>Tak for din indberetning</h3>
+              <ul class="summary-list">
+                <li><strong>Navn:</strong> ${firstName} ${lastName}</li>
+                <li><strong>Tlf.:</strong> ${phone}</li>
+                <li><strong>E-mail:</strong> ${email}</li>
+                <li><strong>Type:</strong> ${reportType}</li>
+                <li><strong>Område:</strong> ${area}</li>
+                <li><strong>Dato:</strong> ${date}</li>
+              </ul>
+              <div class="summary-details">
+                <strong>Beskrivelse:</strong>
+                <p>${details.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</p>
+              </div>
+            </div>
+          `;
+
+          // (Valgfrit) Scroll til summary
+          document
+            .getElementById("form-summary")
+            ?.scrollIntoView({ behavior: "smooth" });
+          // (Valgfrit) Nulstil formularen
+          form.reset();
+        });
+      })();
+    </script>
+  </body>
+</html>
