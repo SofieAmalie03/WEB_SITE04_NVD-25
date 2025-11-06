@@ -6,7 +6,7 @@
   --color-head-bg: #800000;
 
   /* Logotype */
-  --color-logotype-bg: black;
+  --color-logotype-bg: rgb(3, 3, 3);
   --color-text-logotype: #fffae2;
   --font-logotype-size: 2rem;
 
