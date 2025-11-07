@@ -77,3 +77,10 @@
   border-radius: 20px;
   overflow: hidden;
 }
+
+.my_scale1 {
+  transform: scale(2);
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  fill: rgb(33, 9, 9) !important;
+}

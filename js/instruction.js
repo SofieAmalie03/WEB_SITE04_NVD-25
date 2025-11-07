@@ -1,15 +1,7 @@
-document
-  .querySelector(".info-graphic button:nth-of-type(1)")
-  .addEventListener("click", function () {
-    console.log("BMO button clicked");
-  });
-document
-  .querySelector(".info-graphic button:nth-of-type(2)")
-  .addEventListener("click", function () {
-    console.log("KRISE button clicked");
-  });
-document
-  .querySelector(".info-graphic button:nth-of-type(3)")
-  .addEventListener("click", function () {
-    console.log("VEJLEDNING button clicked");
-  });
+console.log("loaded instructions...");
+document.querySelector("#Spot-En-Myg").addEventListener("click", spotF);
+function spotF() {
+  console.log("spotF er loaded");
+
+  document.querySelector("#nr_1").classList.add("my_scale1");
+}
