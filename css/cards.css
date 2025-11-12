@@ -199,3 +199,23 @@
 .pop-accordion details > div > p {
   margin: 0.5rem 0 0;
 }
+[popover] p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+[popover] strong {
+  color: #ff5555;
+  font-weight: 600;
+}
+[popover] p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+}
+
+[popover] {
+  font-size: 1rem;
+  font-weight: 400;
+}
