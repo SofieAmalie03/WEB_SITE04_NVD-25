@@ -91,24 +91,93 @@
       <section id="breaking">
         <article class="news_card">
           <h3>Flere festivaler lukket efter Neonpest-udbrud</h3>
-  
           <p>Myndighederne har bekræftet smitte på tre store events i weekenden.</p>
-      
           <img src="img/11.png" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+        
+          <button class="cta_btn" type="button"
+                  popovertarget="pop_festival"
+                  popovertargetaction="show">
+            Læs mere
+          </button>
         </article>
-        <article class="news_card">
-          <h3>NVD-myggene når Nordjylland </h3>
-          <p>Borgerne opfordres til at undgå søområder efter mørkets frembrud.</p>
-          <img src="img/nordjylland.png" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
-        <article class="news_card">
-          <h3>Erhvervsakademi København: EK sat i søgelyset efter Neonpest-fund</h3>
-          <p>Forskere mistænker, at en gruppe tidligere studerende fra EK i København(...)</p>
-          <img src="img/ek_i_søgelyset.png" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
-        </article>
+   
+        <div id="pop_festival" popover aria-labelledby="pop_festival_t" aria-describedby="pop_festival_d">
+          <button class="cta_btn" type="button"
+                  popovertarget="pop_festival"
+                  popovertargetaction="hide">
+            Luk
+          </button>
+        
+          <h4 id="pop_festival_t">Flere festivaler lukket efter Neonpest-udbrud</h4>
+          <time class="newsDate" datetime="2025-04-06T20:14">6. APRIL 2025 – KL. 20:14</time>
+          <img src="img/11.png" alt="Festivalbillede" />
+          <p id="pop_festival_d">
+            Myndighederne har bekræftet smitte på tre store events i weekenden.
+            Alle festivaler er lukket, indtil sikkerhedszonerne er ryddet.
+          </p>
+        </div>
+        
+
+<article class="news_card">
+  <h3>NVD-myggene når Nordjylland</h3>
+  <p>Borgerne opfordres til at undgå søområder efter mørkets frembrud.</p>
+  <img src="img/nordjylland.png" alt="news_img" />
+
+  <button class="cta_btn" type="button"
+          popovertarget="pop_nord"
+          popovertargetaction="show">
+    Læs mere
+  </button>
+</article>
+
+<div id="pop_nord" popover aria-labelledby="pop_nord_t" aria-describedby="pop_nord_d">
+  <button class="cta_btn close" type="button"
+          popovertarget="pop_nord"
+          popovertargetaction="hide">
+    Luk
+  </button>
+
+  <h4 id="pop_nord_t">NVD-myggene når Nordjylland</h4>
+  <time class="newsDate" datetime="2025-04-06T20:14">6. APRIL 2025 – KL. 20:14</time>
+  <img src="img/nordjylland.png" alt="Kort over Nordjylland" />
+  <p id="pop_nord_d">
+    Myndighederne bekræfter, at NVD-myggene nu er observeret i Nordjylland.
+    Borgerne opfordres til at undgå søområder og skovområder efter mørkets frembrud.
+    Kommunen har opsat advarselsskilte ved de mest udsatte steder.
+  </p>
+</div>
+
+
+
+<article class="news_card">
+  <h3>Erhvervsakademi København: EK sat i søgelyset efter Neonpest-fund</h3>
+  <p>Forskere mistænker, at en gruppe tidligere studerende fra EK i København (...)</p>
+  <img src="img/ek_i_søgelyset.png" alt="news_img" />
+
+  <button class="cta_btn" type="button"
+          popovertarget="pop_ek"
+          popovertargetaction="show">
+    Læs mere
+  </button>
+</article>
+
+<div id="pop_ek" popover aria-labelledby="pop_ek_t" aria-describedby="pop_ek_d">
+  <button class="cta_btn close" type="button"
+          popovertarget="pop_ek"
+          popovertargetaction="hide">
+    Luk
+  </button>
+
+  <h4 id="pop_ek_t">Erhvervsakademi København: EK sat i søgelyset efter Neonpest-fund</h4>
+  <time class="newsDate" datetime="2025-04-06T21:20">6. APRIL 2025 – KL. 21:20</time>
+  <img src="img/ek_i_søgelyset.png" alt="Billede af Erhvervsakademi København" />
+  <p id="pop_ek_d">
+    Forskere mistænker, at en gruppe tidligere studerende fra Erhvervsakademi København
+    har været involveret i udviklingen af et eksperimentelt system, der ved et uheld
+    har muteret Neonpest-virussen. Undersøgelser pågår, og bygningen er midlertidigt lukket.
+  </p>
+</div>
+
         <article class="news_card">
           <h3>SENESTE NYHEDER</h3>
         </article>
