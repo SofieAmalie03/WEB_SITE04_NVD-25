@@ -99,7 +99,7 @@
 .news_card:last-child {
   text-align: center;
 }
-/* === Popover === */
+
 [popover] {
   position: fixed;
   inset: 0;
@@ -120,4 +120,82 @@
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
 }
-/* osv. */
+
+[popover] .cta_btn.close {
+  display: inline-flex;
+  margin-left: auto;
+  margin-bottom: 0.6rem;
+  background: #1e1f27;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+[popover] .newsDate {
+  color: #c5c7d0;
+  font-size: 0.9rem;
+  display: block;
+  margin: 0.2rem 0 0.6rem;
+}
+[popover] img {
+  border-radius: 12px;
+  margin: 0.5rem 0;
+}
+
+.pop-accordion details {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  background: #14151b;
+  color: #fff;
+  padding: 0.75rem 1rem;
+}
+.pop-accordion details + details {
+  margin-top: 0.6rem;
+}
+
+.pop-accordion summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+  padding-right: 1.5rem;
+}
+.pop-accordion summary::marker {
+  content: none;
+}
+.pop-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.pop-accordion summary::after {
+  content: "▸";
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(2px);
+  transition: transform 0.2s ease;
+}
+.pop-accordion details[open] summary::after {
+  transform: translateY(2px) rotate(90deg);
+}
+
+.pop-accordion summary .label.less {
+  display: none;
+}
+.pop-accordion details[open] summary .label.more {
+  display: none;
+}
+.pop-accordion details[open] summary .label.less {
+  display: inline;
+}
+
+.pop-accordion details::details-content {
+  height: 0;
+  overflow: clip;
+  transition: 0.3s allow-discrete;
+}
+.pop-accordion details[open]::details-content {
+  height: auto;
+}
+.pop-accordion details > div > p {
+  margin: 0.5rem 0 0;
+}
