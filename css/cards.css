@@ -99,3 +99,25 @@
 .news_card:last-child {
   text-align: center;
 }
+/* === Popover === */
+[popover] {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: clamp(320px, 90vw, 50ch);
+  max-height: 90vh;
+  overflow: auto;
+  background: #101015;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.55);
+  outline: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+}
+[popover]::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+/* osv. */
