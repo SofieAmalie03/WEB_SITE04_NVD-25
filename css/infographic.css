@@ -1,141 +1,150 @@
-/* --- grafik + tekstkort --- */
-#head-txt {
-  fill: #363636;
+html.dark {
+  color-scheme: light;
 }
 
-.info-graphic,
-.info-text {
-  background: #9e9292;
-  border-radius: 20px;
-}
+:root {
+  /* --- grafik + tekstkort --- */
 
-/* venstre kort (grafik) */
-.info-graphic {
-  display: grid;
-  grid-template-rows: 1fr auto;
-  align-items: stretch;
-  gap: 0;
-  padding: 0;
-  margin: 60px clamp(1rem, 5vw, 4rem) 80px auto;
-  width: min(80%, 600px);
-  overflow: hidden;
-}
+  #head-txt {
+    fill: light-dark(#222222, #363636);
+  }
 
-/* billedet i kortet */
-.Aimyg {
-  width: 140%;
-  height: auto;
-  display: block;
-  border-radius: 20px;
-  overflow: hidden;
-}
+  .info-graphic,
+  .info-text {
+    background: light-dark(#dfcece, #9e9292);
+    border-radius: 20px;
+  }
 
-/* knap-rækken under billedet */
-.info-graphic-buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  padding: 1rem;
-  width: 100%;
-  background: transparent;
-  flex-wrap: wrap; /* falder pænt ned på lille skærm */
-}
-
-/* knapperne */
-.info-graphic button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.35rem;
-  padding: 0.6rem 1.4rem;
-  border-radius: 999px;
-  border: 0;
-  background: #ff7700;
-  color: #000;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: transform 0.12s ease, filter 0.15s ease, background 0.15s ease;
-}
-
-.info-graphic button:hover {
-  background: #ffa770;
-}
-.info-graphic button:active {
-  transform: translateY(1px);
-}
-
-/* aktiv knap (når du tilføjer .is-active i JS) */
-.info-graphic button.is-active {
-  background: #ff8d26;
-  filter: saturate(110%);
-}
-
-/* højre kort (tekst) */
-.info-text {
-  padding: 20px 0;
-}
-
-.info-text h2 {
-  line-height: 3rem;
-  text-align: center;
-  background: #000;
-  color: #fff;
-  margin-bottom: 1rem;
-}
-
-.info-text h3 {
-  font-size: 0.8rem;
-  line-height: 0.8rem;
-  font-weight: 600;
-  margin: 0;
-  padding: 0;
-}
-
-.info-text > *:not(:first-child) {
-  margin: 0 clamp(1rem, 10%, 7rem);
-}
-
-.info-text p {
-  font-size: 0.9rem;
-  line-height: 1.45;
-  margin: 0 0 1.2rem 0;
-  padding: 0;
-}
-
-.info-box {
-  padding: 1.5rem 1rem 0.5rem;
-  background: #2a1a12;
-}
-
-.info-box:nth-of-type(2n) {
-  background: #c06119;
-}
-
-/* SVG markering/zoom */
-.my_scale1 {
-  transform: scale(2);
-  transform-box: fill-box;
-  transform-origin: 50% 50%;
-  fill: rgb(33, 9, 9) !important;
-  transition: transform 0.25s ease, fill 0.25s ease;
-}
-
-/* responsiv finpudsning */
-@media (max-width: 560px) {
+  /* venstre kort (grafik) */
   .info-graphic {
-    width: 92%;
-    margin-right: auto;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    margin: 60px clamp(1rem, 5vw, 4rem) 80px auto;
+    width: min(80%, 600px);
+    overflow: hidden;
   }
-  .info-text > *:not(:first-child) {
-    margin-left: 1rem;
-    margin-right: 1rem;
+
+  /* billedet i kortet */
+  .Aimyg {
+    width: 140%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+    overflow: hidden;
   }
+
+  /* knap-rækken under billedet */
   .info-graphic-buttons {
-    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    width: 100%;
+    background: transparent;
+    flex-wrap: wrap;
   }
+
+  /* Knapper */
   .info-graphic button {
-    padding: 0.55rem 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    border: 0;
+    background: light-dark(#ff7700, #ff7700);
+    color: light-dark(#000000, #000);
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.12s ease, filter 0.15s ease, background 0.15s ease;
+  }
+
+  .info-graphic button:hover {
+    background: light-dark(#ffa770, #ffa770);
+  }
+  .info-graphic button:active {
+    transform: translateY(1px);
+  }
+
+  /* aktiv knap */
+  .info-graphic button.is-active {
+    background: light-dark(#ff8d26, #ff8d26);
+    filter: saturate(110%);
+  }
+
+  /* højre tekstkort */
+  .info-text {
+    padding: 20px 0;
+  }
+
+  .info-text h2 {
+    line-height: 3rem;
+    text-align: center;
+    background: light-dark(#ededed, #000);
+    color: light-dark(#111111, #fff);
+    margin-bottom: 1rem;
+  }
+
+  .info-text h3 {
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    color: light-dark(#222222, #ffffff);
+  }
+
+  .info-text > *:not(:first-child) {
+    margin: 0 clamp(1rem, 10%, 7rem);
+  }
+
+  .info-text p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+    margin: 0 0 1.2rem 0;
+    padding: 0;
+    color: light-dark(#2a2a2a, #ffffff);
+  }
+
+  .info-box {
+    padding: 1.5rem 1rem 0.5rem;
+    background: light-dark(#f8f4f2, #483d37);
+  }
+
+  .info-box:nth-of-type(2n) {
+    background: light-dark(#ffe3c2, #c06119);
+  }
+
+  /* SVG markering / zoom */
+  .my_scale1 {
+    transform: scale(2);
+    transform-box: fill-box;
+    transform-origin: 50% 50%;
+    fill: light-dark(#a83232, rgb(33, 9, 9)) !important;
+    transition: transform 0.25s ease, fill 0.25s ease;
+  }
+
+  /* responsiv finpudsning */
+  @media (max-width: 560px) {
+    .info-graphic {
+      width: 92%;
+      margin-right: auto;
+    }
+    .info-text > *:not(:first-child) {
+      margin-left: 1rem;
+      margin-right: 1rem;
+    }
+    .info-graphic-buttons {
+      gap: 0.5rem;
+    }
+    .info-graphic button {
+      padding: 0.55rem 1.1rem;
+    }
   }
 }
