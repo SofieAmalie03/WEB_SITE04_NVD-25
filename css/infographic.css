@@ -3,8 +3,6 @@ html.dark {
 }
 
 :root {
-  /* --- grafik + tekstkort --- */
-
   #head-txt {
     fill: light-dark(#222222, #363636);
   }
@@ -16,7 +14,6 @@ html.dark {
     border: 3px solid #ff7a1a;
   }
 
-  /* venstre kort (grafik) */
   .info-graphic {
     display: grid;
     grid-template-rows: 1fr auto;
@@ -28,7 +25,6 @@ html.dark {
     overflow: hidden;
   }
 
-  /* billedet i kortet */
   .Aimyg {
     width: 140%;
     height: auto;
@@ -37,7 +33,6 @@ html.dark {
     overflow: hidden;
   }
 
-  /* knap-rækken under billedet */
   .info-graphic-buttons {
     display: flex;
     align-items: center;
@@ -49,7 +44,6 @@ html.dark {
     flex-wrap: wrap;
   }
 
-  /* Knapper */
   .info-graphic button {
     display: inline-flex;
     align-items: center;
@@ -73,13 +67,11 @@ html.dark {
     transform: translateY(1px);
   }
 
-  /* aktiv knap */
   .info-graphic button.is-active {
     background: light-dark(#ff8d26, #ff8d26);
     filter: saturate(110%);
   }
 
-  /* højre tekstkort */
   .info-text {
     padding: 20px 0;
   }
@@ -122,7 +114,6 @@ html.dark {
     background: light-dark(#ffe3c2, #c06119);
   }
 
-  /* SVG markering / zoom */
   .my_scale1 {
     transform: scale(2);
     transform-box: fill-box;
@@ -131,7 +122,6 @@ html.dark {
     transition: transform 0.25s ease, fill 0.25s ease;
   }
 
-  /* responsiv finpudsning */
   @media (max-width: 560px) {
     .info-graphic {
       width: 92%;

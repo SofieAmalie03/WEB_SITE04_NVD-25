@@ -46,7 +46,6 @@ html.dark {
     object-fit: cover;
   }
 
-  /* NEWS CARDS */
   .news_card {
     background-color: light-dark(#f4f2f0, #716a69);
     display: grid;
@@ -95,14 +94,11 @@ html.dark {
     text-align: center;
   }
 
-  /* CTA BUTTONS */
   .cta_btn {
     display: inline-block;
     padding: 0.4rem 1rem;
-    background-color: light-dark(
-      #ff4b00,
-      #ff4b00
-    ); /* samme farve i begge modes */
+    background-color: light-dark(#ff4b00, #ff4b00);
+
     color: light-dark(#ffffff, white);
     text-decoration: none;
     width: max-content;
@@ -122,7 +118,6 @@ html.dark {
     margin-left: 1rem;
   }
 
-  /* POPOVER */
   [popover] {
     position: fixed;
     inset: 0;
@@ -167,7 +162,6 @@ html.dark {
     margin: 0.5rem 0;
   }
 
-  /* ACCORDION IN POPOVER */
   .pop-accordion details {
     border: 1px solid light-dark(rgba(0, 0, 0, 0.12), rgba(255, 255, 255, 0.12));
     border-radius: 10px;

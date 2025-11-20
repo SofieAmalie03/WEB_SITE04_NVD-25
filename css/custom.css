@@ -37,7 +37,6 @@ html.dark {
   --color-infobox-1-bg: light-dark(#fff2da, #cfcec6);
   --color-infobox-2-bg: light-dark(#ecdecf, #969995);
 
-  /* Font sizes og weights er uændret */
   --font-family-sans: "Rubik";
   --font-weight-light: 300;
   --font-weight-regular: 400;
