@@ -185,21 +185,87 @@ html.dark {
   nav a:active {
     background-color: var(--color-link-active);
   }
-
-  footer a {
-    font-size: 0.7rem;
-  }
-
   header,
-  header > nav,
-  #logotype-wrapper {
+  header > nav {
     width: 100vw;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
   }
 
-  header > nav {
-    padding-left: 0;
-    padding-right: 0;
+  footer {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    background: light-dark(#f7f2f2, #201a1a);
+
+    padding: 3rem 2rem;
+
+    color: light-dark(#222, #fff);
+
+    border-top: 4px solid light-dark(#e34d23, #ff5c27);
+  }
+
+  footer nav {
+    margin-bottom: 2rem;
+  }
+
+  footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  footer nav li {
+    margin-bottom: 0.4rem;
+  }
+
+  footer a {
+    font-size: 0.7rem;
+    color: light-dark(#444, #d8d8d8);
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  footer a:hover {
+    color: light-dark(#cc3d15, #ff5c27);
+    transform: translateX(4px);
+  }
+
+  footer nav::before {
+    content: attr(class);
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+
+    color: light-dark(#cc3d15, #ff5c27);
+  }
+
+  footer nav::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+
+    background: light-dark(#cc3d15, #ff5c27);
+
+    margin: 5px 0 15px;
+    opacity: 0.8;
+  }
+
+  footer .copyright {
+    text-align: center;
+    border-top: 1px solid
+      light-dark(rgba(227, 77, 35, 0.3), rgba(255, 92, 39, 0.4));
+
+    padding-top: 1rem;
+    opacity: 0.7;
+    margin-top: 2rem;
+    font-size: 0.65rem;
+
+    color: light-dark(#444, #ddd);
   }
 }

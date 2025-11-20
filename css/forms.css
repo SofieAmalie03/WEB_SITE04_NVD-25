@@ -5,13 +5,13 @@ html.dark {
 :root {
   color-scheme: dark;
   body#register {
-    --bg-0: light-dark(#f5eee6, #676161);
+    --bg-0: light-dark(#b5aea5, #676161);
     --bg-1: light-dark(#f0e0cf, #241b17);
-    --ink-0: light-dark(#1f140c, #edd9b0);
+    --ink-0: light-dark(#000000, #edd9b0);
     --ink-1: light-dark(#5b4128, #b08b5b);
     --line: light-dark(#d2c0b1, #3a2a22);
     --accent: light-dark(#ff6d00, #ff6d00);
-    --accent-2: light-dark(#f7dba5, #f1d191);
+    --accent-2: light-dark(#b7b4ad, #f1d191);
     --error: light-dark(#d00000, #ff6b6b);
     --ok: light-dark(#1e7a34, #7ad97a);
     --radius: 12px;
@@ -28,7 +28,7 @@ html.dark {
         light-dark(rgba(255, 204, 102, 0.08), rgba(255, 204, 102, 0.05)),
         transparent 60%
       ),
-      linear-gradient(180deg, var(--bg-0), light-dark(#e3d1bf, #140f0d) 70%);
+      linear-gradient(180deg, var(--bg-0), light-dark(#e7e4e2, #140f0d) 70%);
     color: var(--ink-0);
   }
 
@@ -52,7 +52,7 @@ html.dark {
     background: linear-gradient(
       180deg,
       var(--bg-1),
-      light-dark(#e0d4cb, #726b67)
+      light-dark(#c1bdba, #726b67)
     );
     box-shadow: var(--shadow);
     padding: 32px 28px;
